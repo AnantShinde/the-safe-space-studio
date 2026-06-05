@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-label="Pregnancy placeholder">
+  <defs>
+    <linearGradient id="gca" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5F3ED"/>
+      <stop offset="1" stop-color="#9CAF88" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" rx="14" fill="url(#gca)"/>
+  <path d="M250 110 q10 70 -6 130 a70 70 0 1 0 70 60 q26 -90 6 -190 z" fill="none" stroke="#5B7A9E" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="300" cy="300" r="42" fill="#F4E8E8"/>
+  <text x="300" y="410" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#2C3E50" opacity="0.65">Carrying &amp; pregnancy — image coming soon</text>
+</svg>

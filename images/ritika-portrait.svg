@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-label="Portrait placeholder for Ritika Latke">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4E8E8"/>
+      <stop offset="1" stop-color="#9CAF88"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" rx="16" fill="url(#g)"/>
+  <circle cx="300" cy="270" r="110" fill="#F5F3ED" opacity="0.9"/>
+  <path d="M150 600 q150 -210 300 0 z" fill="#F5F3ED" opacity="0.9"/>
+  <circle cx="300" cy="270" r="110" fill="none" stroke="#5B7A9E" stroke-width="3" opacity="0.5"/>
+  <path d="M150 600 q150 -210 300 0" fill="none" stroke="#5B7A9E" stroke-width="3" opacity="0.5"/>
+  <text x="300" y="675" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" fill="#2C3E50" opacity="0.7">Portrait of Ritika — coming soon</text>
+</svg>

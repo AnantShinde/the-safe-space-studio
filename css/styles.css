@@ -1,0 +1,104 @@
+:root{
+  --sage:#9CAF88;
+  --cream:#F5F3ED;
+  --charcoal:#2C3E50;
+  --taupe:#B8A99F;
+  --blush:#F4E8E8;
+  --slate:#5B7A9E;
+  --white:#ffffff;
+  --max-width:1100px;
+}
+html{scroll-behavior:smooth;min-height:100%;}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.6;overflow:hidden;}
+main{scroll-snap-type:y proximity;height:calc(100vh - 88px);overflow-y:auto;scroll-behavior:smooth;}
+section{scroll-snap-align:start;min-height:calc(100vh - 88px);padding-top:88px;}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.site-header{background:var(--white);border-bottom:1px solid #eee;position:fixed;top:0;left:0;right:0;z-index:100;min-height:88px;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--max-width);margin:0 auto;padding:16px 24px;}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-name{font-weight:600}
+.logo{width:48px;height:48px}
+.nav-list{display:flex;gap:16px;align-items:center;}
+#nav-toggle{display:none}
+
+.hero{padding:120px 0 60px;background:linear-gradient(180deg,var(--cream),#fff)}
+.hero-inner{display:flex;gap:32px;align-items:center}
+.hero-copy{flex:1}
+.hero-copy h1{font-family:Playfair Display,serif;font-size:38px;color:var(--charcoal);margin-bottom:12px}
+.lead{font-size:18px;color:#4a4a4a;margin-bottom:18px}
+.hero-art{flex:1}
+.btn{display:inline-block;padding:12px 18px;border-radius:8px;background:transparent;border:1px solid var(--slate);color:var(--slate);cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--sage);border-color:var(--sage);color:var(--white);}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.hero-note{font-size:14px;color:#6b6b6b;margin-top:4px}
+.hero-copy h1{max-width:18ch}
+
+/* Perinatal journey */
+.journey{background:linear-gradient(180deg,#fff,var(--cream))}
+.section-intro{max-width:64ch;color:#4a4a4a;font-size:17px;margin-top:8px}
+.journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+.journey-card{background:var(--white);padding:16px;border-radius:14px;box-shadow:0 6px 16px rgba(12,12,12,0.05)}
+.journey-img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:12px;display:block}
+.journey-card h3{font-family:Playfair Display,serif;margin-bottom:6px}
+
+/* Relationships */
+.relationships{background:var(--cream)}
+.about-art img{width:100%;border-radius:12px;display:block}
+.bullets{list-style:none;margin:14px 0;padding:0}
+.bullets li{position:relative;padding-left:22px;margin-bottom:12px;line-height:1.6}
+.bullets li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--sage)}
+.muted{color:#6b6b6b;font-style:italic;font-size:15px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:40px 0}
+.about-art img{border-radius:12px}
+.credentials{background:var(--blush);padding:12px;border-radius:8px;margin-top:12px}
+
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 6px 16px rgba(12,12,12,0.04)}
+.card-icon{width:48px;height:48px;margin-bottom:8px}
+
+.approach-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.approach-list li{background:var(--white);padding:8px 12px;border-radius:8px}
+
+.faqs .accordion{margin-top:12px}
+.accordion-toggle{width:100%;text-align:left;padding:12px;border:1px solid #e6e6e6;background:#fff;border-radius:8px;margin-top:8px;cursor:pointer}
+.accordion-panel{padding:12px;display:none;background:#fff;border-radius:8px;border:1px solid #eee;margin-top:4px}
+
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 0}
+.contact-form form{background:var(--white);padding:16px;border-radius:8px}
+label{display:block;margin-top:8px;font-size:14px}
+input,textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-top:6px}
+
+.booking{padding:40px 0}
+section{scroll-margin-top:100px}
+.site-footer{background:var(--white);border-top:1px solid #eee;padding:24px;margin-top:40px}
+.footer-col{display:inline-block;margin-right:18px}
+
+/* Responsive */
+@media (max-width:900px){
+  .two-col{grid-template-columns:1fr;}
+  .card-grid{grid-template-columns:1fr}
+  .journey-grid{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column}
+}
+@media (max-width:700px){
+  /* Continuous scrolling instead of full-screen scroll-snap */
+  body{overflow:auto;}
+  main{height:auto;overflow:visible;scroll-snap-type:none;}
+  section{min-height:auto;scroll-snap-align:none;padding-top:80px;}
+  .hero{padding-top:96px;}
+
+  /* Compact single-row header with hamburger */
+  .site-header{min-height:0;}
+  .header-inner{flex-direction:row;align-items:center;justify-content:space-between;padding:12px 16px;}
+  .brand-name{font-size:15px;}
+  .logo{width:40px;height:40px;}
+  #nav-toggle{display:block;background:transparent;border:1px solid var(--slate);color:var(--slate);border-radius:8px;padding:6px 12px;font-size:20px;line-height:1;cursor:pointer;}
+
+  /* Collapsible dropdown menu (opens below the fixed header) */
+  .nav-list{display:none;flex-direction:column;gap:2px;width:100%;margin:0;position:absolute;top:100%;left:0;right:0;background:var(--white);border-top:1px solid #eee;box-shadow:0 8px 16px rgba(12,12,12,0.06);padding:8px 16px 16px;}
+  .nav-list.open{display:flex;}
+  .nav-list li{width:100%;}
+  .nav-list a{display:block;padding:12px 8px;border-radius:8px;}
+}

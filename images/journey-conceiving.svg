@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" role="img" aria-label="Trying to conceive placeholder">
+  <defs>
+    <linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5F3ED"/>
+      <stop offset="1" stop-color="#F4E8E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="460" rx="14" fill="url(#gc)"/>
+  <circle cx="300" cy="210" r="70" fill="none" stroke="#9CAF88" stroke-width="6"/>
+  <path d="M300 245 q-26 -55 0 -100 q26 45 0 100z" fill="#9CAF88" opacity="0.85"/>
+  <line x1="300" y1="245" x2="300" y2="300" stroke="#9CAF88" stroke-width="6" stroke-linecap="round"/>
+  <text x="300" y="410" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#2C3E50" opacity="0.65">Trying to conceive — image coming soon</text>
+</svg>
