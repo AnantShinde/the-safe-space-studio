@@ -30,7 +30,7 @@ section{scroll-snap-align:start;min-height:calc(100vh - 88px);padding-top:88px;}
 .btn{display:inline-block;padding:12px 18px;border-radius:8px;background:transparent;border:1px solid var(--slate);color:var(--slate);cursor:pointer;text-decoration:none}
 .btn.primary{background:var(--sage);border-color:var(--sage);color:var(--white);}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.hero-note{font-size:14px;color:#6b6b6b;margin-top:4px}
+.hero-note{font-size:18px;color:#6b6b6b;margin-top:4px}
 .hero-copy h1{max-width:18ch}
 
 /* Perinatal journey */
@@ -50,6 +50,7 @@ section{scroll-snap-align:start;min-height:calc(100vh - 88px);padding-top:88px;}
 .muted{color:#6b6b6b;font-style:italic;font-size:15px}
 
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:40px 0}
+#about > .two-col{align-items:start}
 .about-art img{border-radius:12px}
 .credentials{background:var(--blush);padding:12px;border-radius:8px;margin-top:12px}
 
