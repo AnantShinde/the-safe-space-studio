@@ -21,17 +21,71 @@ section{scroll-snap-align:start;min-height:calc(100vh - 88px);padding-top:88px;}
 .nav-list{display:flex;gap:16px;align-items:center;}
 #nav-toggle{display:none}
 
+/* Full-page nameplate */
+.nameplate{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:
+    radial-gradient(ellipse at 22% 18%, rgba(156,175,136,0.22), transparent 58%),
+    radial-gradient(ellipse at 80% 78%, rgba(244,232,232,0.75), transparent 60%),
+    linear-gradient(170deg,var(--cream) 0%,#FBF9F5 55%,#fff 100%);
+}
+.nameplate-inner{width:100%;display:flex;flex-direction:column;align-items:center;gap:0}
+.nameplate-eyebrow{
+  font-size:13px;letter-spacing:0.34em;text-transform:uppercase;color:var(--taupe);
+  font-weight:500;margin-bottom:20px;
+}
+.nameplate-title{
+  font-family:"Cormorant Garamond",Playfair Display,serif;
+  font-weight:300;line-height:0.94;color:var(--charcoal);
+  display:flex;flex-direction:column;align-items:center;margin:0;
+}
+.nameplate-title .np-the{
+  font-family:Parisienne,"Cormorant Garamond",cursive;
+  font-size:clamp(38px,6vw,74px);color:var(--sage);line-height:1;
+  margin-bottom:-0.06em;transform:translateX(-0.35em);
+}
+.nameplate-title .np-main{
+  font-size:clamp(52px,11.5vw,146px);letter-spacing:0.01em;
+}
+.nameplate-title .np-studio{
+  font-size:clamp(52px,11.5vw,146px);letter-spacing:0.24em;
+  font-style:italic;color:var(--slate);text-indent:0.24em;
+}
+.nameplate-rule{
+  display:block;width:min(280px,52%);height:1px;margin:34px 0 22px;
+  background:linear-gradient(90deg,transparent,var(--taupe),transparent);position:relative;
+}
+.nameplate-rule::after{
+  content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;
+  border-radius:50%;background:var(--sage);
+}
+.nameplate-tagline{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;
+  font-size:clamp(19px,2.2vw,27px);color:#5a6b7a;max-width:24ch;
+}
+.nameplate-scroll{
+  margin-top:44px;display:inline-flex;flex-direction:column;align-items:center;gap:10px;
+  text-decoration:none;color:var(--taupe);
+}
+.nameplate-scroll-text{font-size:12px;letter-spacing:0.28em;text-transform:uppercase}
+.nameplate-arrow{
+  width:11px;height:11px;border-right:1px solid var(--sage);border-bottom:1px solid var(--sage);
+  transform:rotate(45deg);animation:np-bob 2.4s ease-in-out infinite;
+}
+@keyframes np-bob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(4px,4px)}}
+@media (prefers-reduced-motion:reduce){.nameplate-arrow{animation:none}}
+
 .hero{padding:120px 0 60px;background:linear-gradient(180deg,var(--cream),#fff)}
 .hero-inner{display:flex;gap:32px;align-items:center}
 .hero-copy{flex:1}
-.hero-copy h1{font-family:Playfair Display,serif;font-size:38px;color:var(--charcoal);margin-bottom:12px}
+.hero-copy h1,.hero-title{font-family:Playfair Display,serif;font-size:38px;color:var(--charcoal);margin-bottom:12px}
 .lead{font-size:18px;color:#4a4a4a;margin-bottom:18px}
 .hero-art{flex:1}
 .btn{display:inline-block;padding:12px 18px;border-radius:8px;background:transparent;border:1px solid var(--slate);color:var(--slate);cursor:pointer;text-decoration:none}
 .btn.primary{background:var(--sage);border-color:var(--sage);color:var(--white);}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .hero-note{font-size:18px;color:#6b6b6b;margin-top:4px}
-.hero-copy h1{max-width:18ch}
+.hero-copy h1,.hero-title{max-width:18ch}
 
 /* Perinatal journey */
 .journey{background:linear-gradient(180deg,#fff,var(--cream))}
@@ -89,6 +143,14 @@ section{scroll-margin-top:100px}
   main{height:auto;overflow:visible;scroll-snap-type:none;}
   section{min-height:auto;scroll-snap-align:none;padding-top:80px;}
   .hero{padding-top:96px;}
+
+  /* Nameplate keeps its full-screen moment on mobile */
+  .nameplate{min-height:100vh;min-height:100svh;padding-top:72px;padding-bottom:32px;}
+  .nameplate-eyebrow{font-size:11px;letter-spacing:0.24em;margin-bottom:14px;}
+  .nameplate-title .np-the{transform:translateX(-0.2em);}
+  .nameplate-title .np-studio{letter-spacing:0.16em;text-indent:0.16em;}
+  .nameplate-rule{margin:26px 0 18px;}
+  .nameplate-scroll{margin-top:32px;}
 
   /* Compact single-row header with hamburger */
   .site-header{min-height:0;}
