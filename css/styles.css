@@ -35,21 +35,19 @@ section{scroll-snap-align:start;min-height:calc(100vh - 88px);padding-top:88px;}
   font-weight:500;margin-bottom:20px;
 }
 .nameplate-title{
-  font-family:"Cormorant Garamond",Playfair Display,serif;
-  font-weight:300;line-height:0.94;color:var(--charcoal);
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:900;line-height:0.98;color:var(--sage);
   display:flex;flex-direction:column;align-items:center;margin:0;
 }
 .nameplate-title .np-the{
-  font-family:Parisienne,"Cormorant Garamond",cursive;
-  font-size:clamp(38px,6vw,74px);color:var(--sage);line-height:1;
-  margin-bottom:-0.06em;transform:translateX(-0.35em);
+  font-size:clamp(26px,4.2vw,54px);letter-spacing:0.18em;text-indent:0.18em;
+  text-transform:uppercase;line-height:1;margin-bottom:0.18em;
 }
 .nameplate-title .np-main{
-  font-size:clamp(52px,11.5vw,146px);letter-spacing:0.01em;
+  font-size:clamp(48px,10.5vw,132px);letter-spacing:0.005em;
 }
 .nameplate-title .np-studio{
-  font-size:clamp(52px,11.5vw,146px);letter-spacing:0.24em;
-  font-style:italic;color:var(--slate);text-indent:0.24em;
+  font-size:clamp(48px,10.5vw,132px);letter-spacing:0.14em;text-indent:0.14em;
 }
 .nameplate-rule{
   display:block;width:min(280px,52%);height:1px;margin:34px 0 22px;
@@ -147,8 +145,8 @@ section{scroll-margin-top:100px}
   /* Nameplate keeps its full-screen moment on mobile */
   .nameplate{min-height:100vh;min-height:100svh;padding-top:72px;padding-bottom:32px;}
   .nameplate-eyebrow{font-size:11px;letter-spacing:0.24em;margin-bottom:14px;}
-  .nameplate-title .np-the{transform:translateX(-0.2em);}
-  .nameplate-title .np-studio{letter-spacing:0.16em;text-indent:0.16em;}
+  .nameplate-title .np-the{letter-spacing:0.14em;text-indent:0.14em;}
+  .nameplate-title .np-studio{letter-spacing:0.1em;text-indent:0.1em;}
   .nameplate-rule{margin:26px 0 18px;}
   .nameplate-scroll{margin-top:32px;}
 
